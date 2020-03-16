@@ -1,6 +1,13 @@
 const express = require('express');
+const connectDB = require('./config/db');
 
 const app = express();
+
+// CONNECT DB
+connectDB();
+
+// INITIALISE MIDDLEWARE
+app.use(express.json({extended: false}));  // can now accept body data
 
 app.get('/', (req, res) => 
     res.json({msg: 'Welcome to the ContactKeeper API'})
