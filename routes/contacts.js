@@ -6,6 +6,7 @@ const {check, validationResult} = require('express-validator/check');
 const User = require('../models/User');   // import user model
 const Contact = require('../models/Contact');   // import contact model
 
+
 // @route   GET api/contacts
 // @desc    Get all user's contacts
 // @access  Private
